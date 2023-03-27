@@ -1,38 +1,255 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(254,200,0);
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./fonts/SF-Pro-Text-Regular.otf');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: 'SF Pro Thin';
+  src: url('./fonts/SF-Pro-Text-Thin.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Semibold';
+  src: url('./fonts/SF-Pro-Text-Semibold.otf');
+}
+
+@font-face {
+  font-family: 'SF Pro Bold';
+  src: url('./fonts/SF-Pro-Text-Bold.otf');
+}
+
+#top > h1 {
+  font-family: 'Sono', sans-serif;
+  letter-spacing: -0.1em;
+  user-select: none;
+}
+
+#landing {
+  width: 100vw;
+  height: 100vh;
+}
+
+#top {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+#main {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#left > h1 {
+  font-family: 'SF Pro Bold';
+  letter-spacing: 0em;
+  font-size: 72px;
+  text-align: center;
+  user-select: none;
+}
+
+#left > h1 > span {
+  background-color: black;
+  color: white;
+  padding: 0px 20px 0px 10px
+}
+
+#download {
+  display: flex;
+  justify-content: center;
+}
+
+#download > button {
+  height: 50px;
+  width: 200px;
+  border: 0px;
+  border-radius: 25px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  margin: 0px 2.5%
+}
+
+#download > a > #trynow {
+  height: 50px;
+  width: 200px;
+  border: 0px;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  margin: 0px 2.5%
+}
+
+#download > a > #trynow:hover {
+  cursor: pointer
+}
+
+#download > button:hover {
+  cursor: pointer;
+}
+
+#footer {
+  display: flex;
+  height: 3vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 14px;
+  font-family: 'SF Pro';
+  color: rgb(192, 150, 0)
+}
+
+#about {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#aboutText > h1 {
+  font-family: 'SF Pro Bold';
+  font-size: 72px;
+}
+
+#aboutText > h3 {
+  font-family: 'SF Pro';
+  font-size: 24px;
+}
+
+#tutorial {
+  border-radius: 10px;
+}
+
+#demo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#apikeydiv {
+  display: flex;
+  align-items: center;
+}
+
+#apikey {
+  width: 30vw;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+}
+
+#subarrow {
+  position: absolute;
+  right: 34.9%;
+  background-color: rgb(254,200,0);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  font-family: 'SF Pro Semibold';
+  font-size: 12px;
+  border: 0px
+}
+
+#subarrow:hover {
+  cursor: pointer;
+}
+
+#apiSuccess {
+  font-family: 'SF Pro';
+  font-size: 14px;
+  line-height: 1em;
+  color: rgb(109, 86, 0)
+}
+
+#paste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pasteinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 30px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 5%;
+  position: relative;
+}
+
+#pasteinput:focus {
+  outline: none
+}
+
+#pastearrow {
+  position: absolute;
+  margin-top: 2.5%;
+  right: 24.8%;
+  border: 0px;
+  border-radius: 25px;
+  height: 25px;
+  width: 50px;
+  background-color: rgb(254,200,0);
+}
+
+#pastearrow:hover {
+  cursor: pointer
+}
+
+#results {
+  width: 45vw;
+  height: 40vh;
+  background-color: rgb(16, 13, 0);
+  margin-top: 2.5%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  box-shadow: 0px 0px 20px;
+  padding: 40px 100px
+}
+
+
+#openai {
+  filter: invert();
+  user-select: none;
+}
+
+#airesults {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-line;
+  font-family: 'SF Pro Thin';
+  line-height: 3em;
+  font-size: 1.1vw;
+  padding: 0;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
