@@ -3,8 +3,6 @@ import './App.css'
 import openAIimg from './assets/openai.png'
 import movie from './assets/extensionOLD.mov'
 
-//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
-
 function App() {
   const [apiValue, setApiValue] = useState('')
   const [encodedApiKey, setEncodedApiKey] = useState('')
