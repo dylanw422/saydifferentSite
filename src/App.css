@@ -125,6 +125,7 @@ body {
 #aboutText > h1 {
   font-family: 'SF Pro Bold';
   font-size: 72px;
+  width: 50%
 }
 
 #aboutText > h3 {
@@ -134,6 +135,7 @@ body {
 
 #tutorial {
   border-radius: 10px;
+  width: 100%
 }
 
 #demo {
