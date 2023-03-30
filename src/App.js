@@ -51,7 +51,7 @@ function App() {
           <h1>Need to say something<br></br> in a <span><em>different</em></span> way?</h1>
           <div id='download'>
             <a href='#demo'><button id='trynow'>Try Now</button></a>
-            <button>Add to Chrome</button>
+            <button onClick={() => window.open('https://chrome.google.com/webstore/detail/saydifferent/lecjpnoijbedejciliibillgjhhgfiej')}>Add to Chrome</button>
           </div>
         </div>
       </div>
